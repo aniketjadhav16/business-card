@@ -7,7 +7,6 @@ const ProfilePicturePage = () => {
   const [image, setImage] = useState(null);
 
   useEffect(() => {
-    // Load the stored image from localStorage on component mount
     const storedImage = localStorage.getItem('userProfilePicture');
     if (storedImage) {
       setImage(storedImage);
@@ -20,7 +19,7 @@ const ProfilePicturePage = () => {
 
     reader.onloadend = () => {
       const base64String = reader.result;
-      localStorage.setItem('userProfilePicture', base64String); // Store image in localStorage
+      localStorage.setItem('userProfilePicture', base64String);
       setImage(base64String);
     };
 
