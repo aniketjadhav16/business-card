@@ -1,9 +1,9 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Center content both vertically and horizontally */
 body, html {
   height: 100%;
   margin: 0;
@@ -11,4 +11,5 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
