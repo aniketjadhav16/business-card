@@ -14,23 +14,23 @@ const NamePage = () => {
     navigate('/ProfilePicturePage');
   }
   return (
-    <div className="name-page-container">
-      <h1 className="name-heading">Name details</h1>
+    <div className="">
+      <h1 className="">Name details</h1>
 
-      <div className="name-input-container">
-        <label className="name-label">First name:</label>
+      <div className="">
+        <label className="">First name:</label>
         <input 
-          className="name-input" 
+          className="" 
           placeholder="Enter first name"
           value={firstName} 
           onChange={(e) => setFirstName(e.target.value)}
         ></input>
       </div>
 
-      <div className="name-input-container">
-        <label className="name-label">Last name:</label>
+      <div className="">
+        <label className="n">Last name:</label>
         <input 
-          className="name-input" 
+          className="" 
           placeholder="Enter last name" 
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
