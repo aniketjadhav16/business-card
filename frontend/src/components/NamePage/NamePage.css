@@ -1,75 +1,78 @@
 .name-page-container {
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 400px;
+  width: 100%;
+  margin: 40px auto 0 auto;
+  padding: 24px 20px 20px 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: box-shadow 0.3s;
 }
 
 .name-page-container:hover {
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
 .name-heading {
-    font-size: 2.2rem;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: bold;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .name-input-container {
-    margin-bottom: 20px;
-    text-align: left;
+  margin-bottom: 16px;
 }
 
 .name-label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #333;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #333;
 }
 
 .name-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .name-next-button {
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-    width: 100%;
-    font-weight: bold;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-weight: bold;
+  display: block;
+  margin: 16px auto 0 auto;
 }
 
 .name-next-button:hover {
-    background-color: #4cae4c;
+  background-color: #4cae4c;
 }
 
 @media (max-width: 768px) {
-    .name-page-container {
-        width: 100%;
-        margin: 0 auto;
-        padding: 15px;
-    }
+  .name-page-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  .name-heading {
+    width: 90%;
+    font-size: 1.5rem;
+  }
 
-    .name-heading {
-        font-size: 1.5rem;
-    }
-
-    .name-next-button {
-        padding: 15px;
-    }
+  .name-next-button {
+    padding: 15px;
+  }
 }

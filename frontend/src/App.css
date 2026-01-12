@@ -1,0 +1,32 @@
+body,
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6fa;
+  margin: 0;
+  padding: 0;
+}
+
+.page-center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .page-center-container {
+    padding: 10px;
+  }
+}

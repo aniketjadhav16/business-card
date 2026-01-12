@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ProfilePicturePage.css";
+import defaultProfile from "../../assets/default-profile.jpg";
 
 const ProfilePicturePage = () => {
   const navigate = useNavigate();
   const [image, setImage] = useState(null);
 
   useEffect(() => {
-    const storedImage = localStorage.getItem('userProfilePicture');
+    const storedImage = localStorage.getItem("userProfilePicture");
     if (storedImage) {
       setImage(storedImage);
     }
@@ -19,7 +20,7 @@ const ProfilePicturePage = () => {
 
     reader.onloadend = () => {
       const base64String = reader.result;
-      localStorage.setItem('userProfilePicture', base64String);
+      localStorage.setItem("userProfilePicture", base64String);
       setImage(base64String);
     };
 
@@ -29,16 +30,20 @@ const ProfilePicturePage = () => {
   };
 
   const onClickNext = () => {
-    navigate('/OccupationPage');
-  }
+    navigate("/OccupationPage");
+  };
 
   return (
     <div className="profile-picture-page-container">
-      <h1 className='profile-picture-heading'>Profile Picture</h1>
+      <h1 className="profile-picture-heading">Profile Picture</h1>
       <img
-        className='profile-picture-img'
-        src={image || "https://via.placeholder.com/150"}
+        className="profile-picture-img"
+        src={image || defaultProfile}
         alt="Profile"
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = defaultProfile;
+        }}
       />
       <input
         type="file"
@@ -46,9 +51,11 @@ const ProfilePicturePage = () => {
         onChange={handleImageUpload}
         className="profile-picture-upload-input"
       />
-      <button className='profile-picture-next-button' onClick={onClickNext}>Next</button>
+      <button className="profile-picture-next-button" onClick={onClickNext}>
+        Next
+      </button>
     </div>
   );
-}
+};
 
 export default ProfilePicturePage;
